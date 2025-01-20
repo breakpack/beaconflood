@@ -62,7 +62,6 @@ typedef struct {
 // 랜덤 MAC 주소 생성
 void generate_random_mac(uint8_t *mac) {
     // Locally Administered MAC (두 번째 비트가 1)
-    // ex) 0x02 로 시작하면 됨
     mac[0] = 0x02;
     for(int i=1; i<MAC_ADDR_LEN; i++){
         mac[i] = rand() & 0xFF;
